@@ -1,41 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function MovieInfo() {
+function MovieInfo({ match }) {
 
+    const [movie, setMovie] = useState({})
+    
+    useEffect(() => {
 
-    // const [randCharacter, setRandCharacter] = useState({});
-    // const [randPlanet, setRandPlanet] = useState({});
-    // const [randStarship, setRandStarship] = useState({});
-
-    // useEffect(() => {
-    //     let randCharNum = Math.floor(Math.random() * movie.characters.length);
-    //     let randPlanetNum = Math.floor(Math.random() * movie.planets.length);
-    //     let randStarshipNum = Math.floor(Math.random() * movie.starships.length);
-
-    //     let characterUrl = movie.characters[randCharNum];
-    //     fetch(characterUrl)
-    //     .then(res => res.json())
-    //     .then(res => setRandCharacter(res))
-    //     .catch(console.error);
+        const movieUrl = `http://swapi.dev/api/films/?search=${match.params.title}`
         
+        fetch(movieUrl)
+        .then(res => res.json())
+        .then(res => {
+            setMovie(res.results[0])
+        })
 
-    //     let planetUrl = movie.planets[randPlanetNum];
-    //     fetch(planetUrl)
-    //     .then(res => res.json())
-    //     .then(res => setRandPlanet(res))
-    //     .catch(console.error);
-        
-        
-    //     let starshipUrl = movie.starships[randStarshipNum];
-    //     fetch(starshipUrl)
-    //     .then(res => res.json())
-    //     .then(res => setRandStarship(res))
-    //     .catch(console.error);
-    // }, []);
+    }, []);
+
+    useEffect(() => { console.log(movie)}, [movie]);
+
 
     return (
         <div>
-            <h3>Movie Info goes here</h3>
+            <h3>{movie.title}</h3>
+            <p>Episode Number: {movie.episode_id}</p>
+            <p>Description: {movie.opening_crawl}</p>
         </div>
     );
 }

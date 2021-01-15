@@ -17,8 +17,8 @@ function App() {
       </Link>
 
       <Route path="/" exact component={Home}/>
-      <Route exact path="/movie-info/:episode_id" render={() => (
-        <MovieInfo />
+      <Route exact path="/movie-info/:title" render={(routerProps) => (
+        <MovieInfo match={routerProps.match}/>
       )}/>
     </div>
   );

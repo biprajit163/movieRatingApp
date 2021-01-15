@@ -28,7 +28,7 @@ function Home() {
             movies.map(movie => {
                 return (
                     <DataContext.Provider value={{ movie }} key={ movie.episode_id }>
-                        <Link to={`/movie-info/${movie.episode_id}`}>
+                        <Link to={`/movie-info/${movie.title}`}>
                             <Movie />
                         </Link>
                     </DataContext.Provider>

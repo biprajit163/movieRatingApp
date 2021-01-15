@@ -3,13 +3,15 @@ import { DataContext } from '../DataContext.jsx';
 import { Link } from 'react-router-dom';
 
 
+import MovieInfo from './MovieInfo.js';
+
 function Movie() {
 
     const {movie} = useContext(DataContext);
 
-    const [randCharacter, setRandCharacter] = useState({});
-    const [randPlanet, setRandPlanet] = useState({});
-    const [randStarship, setRandStarship] = useState({});
+    // const [randCharacter, setRandCharacter] = useState({});
+    // const [randPlanet, setRandPlanet] = useState({});
+    // const [randStarship, setRandStarship] = useState({});
 
     // useEffect(() => {
     //     let randCharNum = Math.floor(Math.random() * movie.characters.length);
@@ -39,9 +41,7 @@ function Movie() {
 
     return (
         <div className="Movie">
-            <Link to="/movie-info/:element_id">
-                <h2>{movie.title}</h2>
-            </Link>;
+            <h2>{movie.title}</h2>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DataContext } from '../DataContext.jsx'; 
-import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Movie from './Movie.js';
 import MovieInfo from './MovieInfo.js';
@@ -24,13 +24,13 @@ function Home() {
 
     return (
       <div className="Home">
-          <Route path={`/movie-info/${movies[0].episode_id}`} component={<MovieInfo/>}/>
-
         {
             movies.map(movie => {
                 return (
                     <DataContext.Provider value={{ movie }} key={ movie.episode_id }>
-                        <Movie />
+                        <Link to={`/movie-info/${movie.episode_id}`}>
+                            <Movie />
+                        </Link>
                     </DataContext.Provider>
                 );
             })

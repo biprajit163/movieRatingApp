@@ -1,5 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 
+
+import CommentSection from './CommentSection.js';
 
 
 function MovieInfo({ match }) {
@@ -113,6 +116,7 @@ function MovieInfo({ match }) {
                 </div>
             </div>
 
+            <CommentSection/>
         </div>
     );
 }

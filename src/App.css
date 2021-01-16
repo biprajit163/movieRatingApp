@@ -1,4 +1,35 @@
 .App {
   text-align: center;
 }
+.MovieInfo {
+  width: 80%;
+  margin: 0 auto;
+}
 
+
+
+
+.movie-features-container {
+  width: 80%;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.starship {
+  width: 50%;
+  margin: 0 10px;
+}
+.starship > h4 {
+  text-align: center
+}
+.starship-card {
+  display: flex;
+}
+.character {
+  width: 50%;
+  margin: 0 10px;
+}
+.planet {
+  width: 50%;
+  margin: 0 10px;
+}

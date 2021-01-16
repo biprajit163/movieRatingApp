@@ -61,7 +61,10 @@ function MovieInfo({ match }) {
         <div className="MovieInfo">
             <h3>{movie.title}</h3>
             <p>Episode Number: {movie.episode_id}</p>
-            <p>Description: {movie.opening_crawl}</p>
+            <p style={{
+                width: '50%',
+                margin: '10px auto'
+            }}>Description: {movie.opening_crawl}</p>
 
             <div className="movie-features-container">
                 <div className="character">

@@ -10,11 +10,16 @@ import MovieInfo from './components/MovieInfo.js';
 function App() {
   return (
     <div className="App">
-      <Link to="/">
-        <h1 style={{
-          textDecoration: 'none'
-        }}>Rate Starwars Movies</h1>
-      </Link>
+      <h1 style={{ 
+        backgroundColor: 'black',
+        padding: '4rem 0'
+      }}>
+        <Link to="/" style={{
+          textDecoration: 'none',
+          color: 'rgb(129, 177, 33)',
+          fontSize: '3rem'
+        }}>Rate Starwars Movies</Link>
+      </h1>
 
       <Route path="/" exact component={Home}/>
       <Route exact path="/movie-info/:title" render={(routerProps) => (

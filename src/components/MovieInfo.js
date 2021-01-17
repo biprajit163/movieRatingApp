@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-import CommentSection from './CommentSection.js';
+import CommentList from './CommentList.js';
 
 
 function MovieInfo({ match }) {
@@ -116,7 +116,7 @@ function MovieInfo({ match }) {
                 </div>
             </div>
 
-            <CommentSection/>
+            <CommentList/>
         </div>
     );
 }

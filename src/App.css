@@ -88,19 +88,15 @@
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------------
-<CommentSection/>
+<CommentForm/>
 ---------------------------------------------------------------------------------------------------------------------------------------- */
-.CommentSection {
-  text-align: center;
+.comment-form {
   width: 50%;
   margin: 0 auto;
-}
-.commentSection-form {
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
 }
-.commentSection-button {
+.comment-form-button {
   display: flex;
   justify-content: left;
   width: 25%

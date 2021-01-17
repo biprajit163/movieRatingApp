@@ -8,29 +8,31 @@ function CommentSection() {
 
     function handleSubmit(event) {
         event.preventDefault()
-
-        setMyComment(event.target.value);
+        console.log(myComment);
+        setMyComment('');
     }
 
     function handleChange(event) {
         setMyComment(event.target.value)
     }
 
+    
+
     return (
         <div className="CommentSection">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="commentSection-form">
                 <label htmlFor="comment">Make a comment:</label>
                 <textarea 
                     id="comment"  
                     value={myComment.comment}
                     onChange={handleChange}
-                    cols="50"
-                    rows="10"
+                    cols="10"
+                    rows="5"
                 ></textarea>
-                <button type="submit">Comment</button>
+                <button type="submit" className="commentSection-button">Comment</button>
             </form>
 
-            <div className="comment-section"></div>
+            <div className="comment-section-submit"></div>
         </div>
     );
 }

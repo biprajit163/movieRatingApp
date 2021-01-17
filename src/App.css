@@ -83,3 +83,28 @@
   width: 50%;
   margin: 0 10px;
 }
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------
+<CommentSection/>
+---------------------------------------------------------------------------------------------------------------------------------------- */
+.CommentSection {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.commentSection-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.commentSection-button {
+  display: flex;
+  justify-content: left;
+  width: 25%
+}
+
+
+

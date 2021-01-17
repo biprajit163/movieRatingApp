@@ -116,7 +116,7 @@ function MovieInfo({ match }) {
                 </div>
             </div>
 
-            <CommentSection/>
+            <CommentSection movieTitle={match.params.title}/>
         </div>
     );
 }

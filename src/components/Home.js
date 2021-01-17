@@ -24,6 +24,7 @@ function Home() {
 
     return (
       <div className="Home">
+        <button onClick={() => localStorage.clear()}>Clear Local Storage</button>
         {
             movies.map(movie => {
                 return (

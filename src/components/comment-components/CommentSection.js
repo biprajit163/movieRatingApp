@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import CommentForm from './CommentForm.js';
-import CommentDisplay from './CommentDisplay.js';
+import CommentList from './CommentList.js';
 
-function CommentList() {
+function CommentSection() {
 
     const [comments, setComments] = useState([]);
 
@@ -14,11 +14,11 @@ function CommentList() {
     }
 
     return (
-        <div>
+        <div className="CommentSection">
             <CommentForm onSubmit={addComment}/>
-            <CommentDisplay comments={comments}/>
+            <CommentList comments={comments}/>
         </div>
     );
 }
 
-export default CommentList;
+export default CommentSection;

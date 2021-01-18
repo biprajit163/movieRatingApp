@@ -35,7 +35,7 @@ function CommentHistory() {
     }
 
     function handleChange(event) {
-        setLogin({...login, [event.target.id]: event.target.value});
+        setLogin({...login, password: event.target.value});
     }
 
     return (

@@ -38,7 +38,7 @@ function CommentSection({ movieTitle }) {
 
     return (
         <div className="CommentSection">
-            <CommentForm onSubmit={addComment}/>
+            <CommentForm addComment={addComment}/>
             <CommentList comments={comments}/>
         </div>
     );

@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 
 
-function CommentForm({ onSubmit }) {
+function CommentForm({ addComment }) {
 
     const [comment, setComment] = useState('');
 
     function handleSubmit(event) {
         event.preventDefault()
-        onSubmit(comment);
+        addComment(comment);
         setComment('');
     }
 

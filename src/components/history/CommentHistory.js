@@ -13,29 +13,42 @@ import Episode6 from './Episode6.js';
 function CommentHistory() {
 
     const initialState = {
-        password: ''
+        password: '',
+        loginStatus: false
     }
 
-    const [login, setPassword] = useState(initialState)
+    const [login, setLogin] = useState(initialState);
+
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(login.password);
-        setPassword(initialState)
+
+        if(login.password === 'password') {
+            setLogin({...login, loginStatus: true});
+            localStorage.setItem('loginStatus', 'true');
+        } else {
+            setLogin(initialState);
+            localStorage.setItem('loginStatus', login.loginStatus);
+        }
+
+        console.log(login);
     }
 
     function handleChange(event) {
-        setPassword({...login, [event.target.id]: event.target.value})
+        setLogin({...login, [event.target.id]: event.target.value});
     }
 
     return (
         <div className="CommentHistory">
             <h1>My Comments History</h1>
             {
-                login.password === "myComments" ?
+                JSON.parse(localStorage.getItem('loginStatus')) ?
                 <div className="comment-history-container">
                     <button onClick={() => localStorage.clear()}>Clear Local Storage</button>
-                    <button onClick={() => setPassword(initialState)}>Logout</button>
+                    <button onClick={() => {
+                        setLogin(initialState);
+                        localStorage.setItem('loginStatus', JSON.stringify(initialState.loginStatus));
+                    }}>Logout</button>
                     <Episode1/>
                     <Episode2/>
                     <Episode3/>

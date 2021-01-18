@@ -44,9 +44,17 @@ function CommentHistory() {
             {
                 JSON.parse(localStorage.getItem('loginStatus')) ?
                 <div className="comment-history-container">
-                    <button onClick={() => localStorage.clear()}>Clear Local Storage</button>
                     <button onClick={() => {
-                        setLogin(initialState);
+                        window.location.reload()
+                        localStorage.removeItem('aNewHope');
+                        localStorage.removeItem('theEmpireStrikesBack');
+                        localStorage.removeItem('returnOfTheJedi');
+                        localStorage.removeItem('thePhantomMenace');
+                        localStorage.removeItem('attackOfTheClones');
+                        localStorage.removeItem('revengeOfTheSith');
+                    }}>Clear Comments</button>
+                    <button onClick={() => {
+                        window.location.reload()
                         localStorage.setItem('loginStatus', JSON.stringify(initialState.loginStatus));
                     }}>Logout</button>
                     <Episode1/>

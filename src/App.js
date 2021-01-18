@@ -6,20 +6,38 @@ import './App.css';
 
 import Home from './components/Home.js'
 import MovieInfo from './components/MovieInfo.js';
+import CommentHistory from './components/history/CommentHistory.js';
 
 function App() {
   return (
     <div className="App">
-      <Link to="/">
-        <h1 style={{
-          textDecoration: 'none'
-        }}>Rate Starwars Movies</h1>
-      </Link>
-
-      <Route path="/" exact component={Home}/>
-      <Route exact path="/movie-info/:title" render={(routerProps) => (
-        <MovieInfo match={routerProps.match}/>
-      )}/>
+      <header>
+        <h1>
+          <Link 
+            to="/" 
+            style={{
+              textDecoration: 'none',
+              color: 'rgb(129, 177, 33)',
+              fontSize: '3rem'
+            }}
+          >Rate Starwars Movies</Link>
+        </h1>
+        <Link 
+          to="/history/CommentHistory"
+          style={{
+            textDecoration: 'none',
+            color: '#2befed',
+            fontSize: '1rem'
+          }}
+        >My Comment History</Link>
+      </header>
+      <main>
+        <Route path="/" exact component={Home}/>
+        <Route exact path="/movie-info/:title" render={(routerProps) => (
+          <MovieInfo match={routerProps.match}/>
+        )}/>
+        <Route exact path="/history/CommentHistory" component={CommentHistory}/>
+      </main>
     </div>
   );
 }

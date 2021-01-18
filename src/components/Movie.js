@@ -9,9 +9,11 @@ function Movie() {
     return (
         <div className="Movie">
             <h2>{movie.title}</h2>
-            <p>Director: {movie.director}</p>
-            <p>Producer: {movie.producer}</p>
-            <p>Release Date: {movie.release_date}</p>
+            <div className="movie-description">
+                <p><span>Director:</span> {movie.director}</p>
+                <p><span>Producer:</span> {movie.producer}</p>
+                <p><span>Release Date:</span> {movie.release_date}</p>
+            </div>
         </div>
     );
 }

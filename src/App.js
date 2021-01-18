@@ -6,7 +6,7 @@ import './App.css';
 
 import Home from './components/Home.js'
 import MovieInfo from './components/MovieInfo.js';
-import CommentHistory from './history/CommentHistory.js';
+import CommentHistory from './components/history/CommentHistory.js';
 
 function App() {
   return (

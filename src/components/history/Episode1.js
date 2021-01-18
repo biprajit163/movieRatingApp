@@ -17,11 +17,14 @@ function Episode1() {
 
     return (
         <div className="Episode1">
-            <h3>A New Hope comment history</h3>
+            <h4>A New Hope comment history</h4>
             {
-                episode1Comments.map(comment => {
+                episode1Comments.map((comment, index) => {
                     return(
-                        <p style={{textAlign: 'left'}}>{comment}</p>
+                        <p
+                            key={index} 
+                            style={{textAlign: 'left'}}
+                        >{comment}</p>
                     );
                 })
             }

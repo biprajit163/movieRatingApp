@@ -35,7 +35,7 @@ function CommentHistory() {
                 login.password === "myComments" ?
                 <div className="comment-history-container">
                     <button onClick={() => localStorage.clear()}>Clear Local Storage</button>
-                    <button>Logout</button>
+                    <button onClick={() => setPassword(initialState)}>Logout</button>
                     <Episode1/>
                     <Episode2/>
                     <Episode3/>

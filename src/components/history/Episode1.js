@@ -9,7 +9,7 @@ function Episode1() {
         let myComments = []
         
         if(localStorage.getItem('aNewHope')) {
-            myComments = JSON.parse(localStorage.getItem('aNewHope'))
+            myComments = JSON.parse(localStorage.getItem('1'))
         }
 
         setEpisode1Comments(myComments);

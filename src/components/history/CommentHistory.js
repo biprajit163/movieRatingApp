@@ -11,7 +11,7 @@ import Episode5 from './Episode5.js';
 import Episode6 from './Episode6.js';
 
 function CommentHistory() {
-
+    
     const initialState = {
         password: '',
         loginStatus: false
@@ -46,12 +46,12 @@ function CommentHistory() {
                 <div className="comment-history-container">
                     <button onClick={() => {
                         window.location.reload()
-                        localStorage.removeItem('aNewHope');
-                        localStorage.removeItem('theEmpireStrikesBack');
-                        localStorage.removeItem('returnOfTheJedi');
-                        localStorage.removeItem('thePhantomMenace');
-                        localStorage.removeItem('attackOfTheClones');
-                        localStorage.removeItem('revengeOfTheSith');
+                        localStorage.removeItem('1');
+                        localStorage.removeItem('2');
+                        localStorage.removeItem('3');
+                        localStorage.removeItem('4');
+                        localStorage.removeItem('5');
+                        localStorage.removeItem('6');
                     }}>Clear Comments</button>
                     <button onClick={() => {
                         window.location.reload()

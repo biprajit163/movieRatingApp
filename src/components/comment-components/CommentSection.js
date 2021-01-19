@@ -9,7 +9,33 @@ function CommentSection({ movieTitle }) {
 
     function addComment(comment) {
         const commentsArr = [...comments, comment];
-        console.log(...comments);
+
+        let storedArr = [];
+        let combinedArr = [];
+
+        if(movieTitle === "A New Hope") {
+            storedArr = JSON.parse(localStorage.getItem('aNewHope'));
+        } else if(movieTitle === "The Empire Strikes Back") {
+            storedArr = JSON.parse(localStorage.getItem('theEmpireStrikesBack'));
+        } else if(movieTitle === "Return of the Jedi") {
+            storedArr = JSON.parse(localStorage.getItem('returnOfTheJedi'));
+        } else if(movieTitle === "The Phantom Menace") {
+            storedArr = JSON.parse(localStorage.getItem('thePhantomMenace'));
+        } else if(movieTitle === "Attack of the Clones") {
+            storedArr = JSON.parse(localStorage.getItem('attackOfTheClones'));
+        } else {
+            storedArr = JSON.parse(localStorage.getItem('revengeOfTheSith'));
+        }
+
+        if(storedArr === null) {
+            combinedArr = commentsArr;
+        } else {
+            combinedArr = storedArr.concat(commentsArr);
+        }
+
+        // combinedArr = storedArr.concat(commentsArr);
+        console.log(combinedArr);
+
         setComments(commentsArr);
     }
 

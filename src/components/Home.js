@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Movie from './Movie.js';
 import Rating from './rating-components/Rating.js';
+import { posters } from '../poster_images.jsx';
 
 
 function Home() {
@@ -26,7 +27,7 @@ function Home() {
     return (
       <div className="Home">
         {
-            movies.map(movie => {
+            movies.map((movie, i) => {
                 return (
                     <div className="movie-containter" key={ movie.episode_id }>
                         <DataContext.Provider value={{ movie }}>
@@ -37,7 +38,7 @@ function Home() {
                                     color: 'black' 
                                 }}
                             >
-                                <Movie/>
+                                <Movie poster={`${posters[i]}`}/>
                             </Link>
                         </DataContext.Provider>
                         <Rating/>

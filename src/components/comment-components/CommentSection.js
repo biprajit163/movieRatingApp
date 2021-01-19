@@ -10,15 +10,12 @@ function CommentSection({ movie }) {
     function addComment(comment) {
         const commentsArr = [...comments, comment];
         setComments(commentsArr);
-    }
+    }   
 
     useEffect(() => {
-
         if(movie.episode_id) {
             localStorage.setItem(`${movie.episode_id}`, JSON.stringify(comments))
         }
-        
-
     }, [addComment]);
 
 

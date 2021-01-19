@@ -8,8 +8,8 @@ function Episode6() {
     useEffect(() => {
         let myComments = []
         
-        if(localStorage.getItem('revengeOfTheSith')) {
-            myComments = JSON.parse(localStorage.getItem('revengeOfTheSith'));
+        if(localStorage.getItem('6')) {
+            myComments = JSON.parse(localStorage.getItem('6'));
         }
 
         setEpisode6Comments(myComments);

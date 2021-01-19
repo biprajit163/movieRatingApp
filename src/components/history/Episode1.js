@@ -8,7 +8,7 @@ function Episode1() {
     useEffect(() => {
         let myComments = []
         
-        if(localStorage.getItem('aNewHope')) {
+        if(localStorage.getItem('1')) {
             myComments = JSON.parse(localStorage.getItem('1'))
         }
 

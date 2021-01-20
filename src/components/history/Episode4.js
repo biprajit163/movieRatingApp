@@ -7,16 +7,16 @@ function Episode4() {
     useEffect(() => {
         let myComments = []
         
-        if(localStorage.getItem('thePhantomMenace')) {
-            myComments = JSON.parse(localStorage.getItem('thePhantomMenace'))
+        if(localStorage.getItem('4')) {
+            myComments = JSON.parse(localStorage.getItem('4'))
         }
 
         setEpisode4Comments(myComments);
     }, []);
 
     return (
-        <div className="Episode4">
-            <h4>The Phantom Menace comment history</h4>
+        <div className="comment-history">
+            <h4>A New Hope comment history</h4>
             {
                 episode4Comments.map((comment, index) => {
                     return(

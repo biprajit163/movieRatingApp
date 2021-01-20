@@ -29,7 +29,7 @@ function App() {
             color: '#2befed',
             fontSize: '1rem'
           }}
-        >My Comment History</Link>
+        >Comment History</Link>
       </header>
       <main>
         <Route path="/" exact component={Home}/>

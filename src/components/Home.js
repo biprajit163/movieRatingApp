@@ -3,7 +3,9 @@ import { DataContext } from '../DataContext.jsx';
 import { Link } from 'react-router-dom';
 
 import Movie from './Movie.js';
-import MovieInfo from './MovieInfo.js';
+import Rating from './rating-components/Rating.js';
+import { posters } from '../poster_images.jsx';
+
 
 function Home() {
 
@@ -25,19 +27,22 @@ function Home() {
     return (
       <div className="Home">
         {
-            movies.map(movie => {
+            movies.map((movie, i) => {
                 return (
-                    <DataContext.Provider value={{ movie }} key={ movie.episode_id }>
-                        <Link 
-                            to={`/movie-info/${movie.title}`}  
-                            style={{
-                                textDecoration: 'none', 
-                                color: 'black' 
-                            }}
-                        >
-                            <Movie />
-                        </Link>
-                    </DataContext.Provider>
+                    <div className="movie-container" key={ movie.episode_id }>
+                        <DataContext.Provider value={{ movie }}>
+                            <Link 
+                                to={`/movie-info/${movie.title}`}  
+                                style={{
+                                    textDecoration: 'none', 
+                                    color: 'black' 
+                                }}
+                            >
+                                <Movie poster={`${posters[i]}`}/>
+                            </Link>
+                        </DataContext.Provider>
+                        <Rating/>
+                    </div>
                 );
             })
         }

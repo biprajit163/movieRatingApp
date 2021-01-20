@@ -8,16 +8,16 @@ function Episode5() {
     useEffect(() => {
         let myComments = []
         
-        if(localStorage.getItem('attackOfTheClones')) {
-            myComments = JSON.parse(localStorage.getItem('attackOfTheClones'))
+        if(localStorage.getItem('5')) {
+            myComments = JSON.parse(localStorage.getItem('5'))
         }
 
         setEpisode5Comments(myComments);
     }, []);
 
     return (
-        <div className="Episode5">
-            <h4>Attack of the Clones comment history</h4>
+        <div className="comment-history">
+            <h4>The Empire Strikes Back comment history</h4>
             {
                 episode5Comments.map((comment, index) => {
                     return(

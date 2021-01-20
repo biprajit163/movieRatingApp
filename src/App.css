@@ -22,6 +22,9 @@
   background-color: black;
   /* color: rgb(129, 177, 33); */
 }
+.movie-container {
+  margin-bottom: 10rem;
+}
 
 
 
@@ -31,10 +34,18 @@
 ---------------------------------------------------------------------------------------------------------------------------------------- */
 .Movie {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 6rem;
+  margin-top: 4rem;
+  height: 1000px;
+  width: 800px;
+}
+.Movie > h2 {
+  color: rgb(48, 161, 214);
+  font-size: 50px;
 }
 .movie-description {
+  position: relative;
+  top: 800px;
+  align-self: flex-end;
   display: flex;
   flex-direction: row;
   font-size: 12px;
@@ -42,12 +53,14 @@
   justify-content: space-around;
 }
 .movie-description > p {
+  color: rgb(231, 26, 26);
   width: 50%;
   margin: 0 auto;
 }
 .movie-description > p > span {
+  color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 
@@ -90,6 +103,14 @@
 
 
 
+/*--------------------------------------------------------------------------------------------------------------------------------------
+<CommentSection/>
+---------------------------------------------------------------------------------------------------------------------------------------- */
+.CommentSection {
+  margin-top: 2rem;
+}
+
+
 
 /*--------------------------------------------------------------------------------------------------------------------------------------
 <CommentForm/>
@@ -98,12 +119,22 @@
   width: 50%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.comment-form > textarea {
+  border-radius: 20px;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
 }
 .comment-form-button {
-  display: flex;
-  justify-content: left;
-  width: 25%
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 
@@ -114,27 +145,121 @@
 .CommentList {
   width: 50%;
   margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
 }
+.CommentList > p {
+  width: auto;
+  height: auto;
+  background-color: rgba(58, 43, 36, 0.883);
+  color: rgb(233, 216, 216);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+
+
+
+
+
 
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------------
 <CommentHistory/>
 ---------------------------------------------------------------------------------------------------------------------------------------- */
+.CommentHistory {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.CommentHistory > h1 {
+  font-size: 44px;;
+}
 .comment-history-container {
   width: 50%;
   margin: 0 auto;
+}
+.history-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.history-btn-container > button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 30px;
+  line-height: 20px;
+  font-weight: 600;
+  background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+.comment-history {
+  text-align: left;
+  background-color: rgba(26, 236, 184, 0.959);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+}
+.comment-history > h4 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.comment-history > p {
+  border-bottom: rgba(58, 43, 36, 0.883) solid 2px;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------
+<Credentials/>
+---------------------------------------------------------------------------------------------------------------------------------------- */
+.Credentials {
+  margin: 0;
+  padding: 0;
+}
+.login-icon {
+  margin-left: -20px;
+  cursor: pointer;
+}
+.login-page > input {
+  outline: none;
+  height: 25px;
+  width: 200px;
 }
 
 
 
 
+
+
+
+
+
+
+
 /*--------------------------------------------------------------------------------------------------------------------------------------
-<Episode1/>
+<Rating/>
 ---------------------------------------------------------------------------------------------------------------------------------------- */
-.Episode1 {
-  width: 80%;
-  margin: 0 2rem;
+.Rating {
+  margin-top: 25px;
+  text-align: center;
+}
+input[type="radio"] {
+  display: none;
+}
+.rating-icon {
+  cursor: pointer;
 }
 
 

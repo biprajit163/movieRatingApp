@@ -62,12 +62,18 @@ function MovieInfo({ match }) {
 
     return (
         <div className="MovieInfo">
-            <h3>{movie.title}</h3>
-            <p>Episode Number: {movie.episode_id}</p>
-            <p style={{
-                width: '50%',
-                margin: '10px auto'
-            }}>Description: {movie.opening_crawl}</p>
+            <h3 className="movie-title">{movie.title}</h3>
+
+            <div className="movie-details">
+                <p className="episode-number">Episode {movie.episode_id}</p>
+                <p 
+                    className="movie-crawl"
+                    style={{
+                        width: '50%',
+                        margin: '10px auto'
+                    }}
+                >Description: {movie.opening_crawl}</p>
+            </div>
 
             <div className="movie-features-container">
                 <div className="character">
@@ -104,7 +110,6 @@ function MovieInfo({ match }) {
                         </div>
 
                         <div className="starship-details">
-                            <p>Starship Details:</p>
                             <p>Length: {starship.length}</p>
                             <p>Max Atmosphere Speed: {starship.max_atmosphere_speed}</p>
                             <p>Crew: {starship.crew}</p>

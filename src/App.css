@@ -76,29 +76,83 @@
   margin: 0 auto;
 }
 
+.movie-title {
+  font-size: 36px;
+}
+
+
+.movie-details {
+  text-align: center;
+}
+.episode-number {
+  font-size: 20px;
+}
+
+
 .movie-features-container {
-  width: 80%;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
   margin: 5px auto;
+  margin-bottom: 50px; 
   display: flex;
   justify-content: space-between;
+  text-align: left;
+  word-wrap: break-word;
 }
+
+
 .starship {
   width: 50%;
   margin: 0 10px;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+.starship::-webkit-scrollbar {
+  display: none;
 }
 .starship > h4 {
-  text-align: center
+  text-align: center;
+  font-size: 24px;
 }
 .starship-card {
   display: flex;
 }
+.starship-info {
+  margin-right: 20px;
+}
+.starship-details {
+  margin-left: 20px;
+}
+
+
 .character {
   width: 50%;
   margin: 0 10px;
+  overflow-y: scroll;
+  word-wrap: break-word;
 }
+.character::-webkit-scrollbar {
+  display: none;
+}
+.character > h4 {
+  text-align: center;
+  font-size: 24px;
+}
+
+
 .planet {
   width: 50%;
   margin: 0 10px;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+.planet::-webkit-scrollbar {
+  display: none;
+}
+.planet > h4 {
+  text-align: center;
+  font-size: 24px;
 }
 
 
@@ -108,6 +162,7 @@
 ---------------------------------------------------------------------------------------------------------------------------------------- */
 .CommentSection {
   margin-top: 2rem;
+  padding: 25px auto;
 }
 
 

@@ -16,7 +16,7 @@ function Episode6() {
     }, []);
 
     return (
-        <div className="Episode6">
+        <div className="comment-history">
             <h4>Revenge of the Sith comment history</h4>
             {
                 episode6Comments.map((comment, index) => {

@@ -16,7 +16,7 @@ function Episode5() {
     }, []);
 
     return (
-        <div className="Episode5">
+        <div className="comment-history">
             <h4>Attack of the Clones comment history</h4>
             {
                 episode5Comments.map((comment, index) => {

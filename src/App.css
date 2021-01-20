@@ -161,24 +161,74 @@
 
 
 
+
+
+
+
+
+
 /*--------------------------------------------------------------------------------------------------------------------------------------
 <CommentHistory/>
 ---------------------------------------------------------------------------------------------------------------------------------------- */
+.CommentHistory {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.CommentHistory > h1 {
+  font-size: 44px;;
+}
 .comment-history-container {
   width: 50%;
   margin: 0 auto;
 }
-
-
-
-
-/*--------------------------------------------------------------------------------------------------------------------------------------
-<Episode1/>
----------------------------------------------------------------------------------------------------------------------------------------- */
-.Episode1 {
-  width: 80%;
-  margin: 0 2rem;
+.history-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
 }
+.history-btn-container > button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 30px;
+  line-height: 20px;
+  font-weight: 600;
+  background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+.comment-history {
+  text-align: left;
+  background-color: rgba(26, 236, 184, 0.959);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+}
+.comment-history > h4 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.comment-history > p {
+  border-bottom: rgba(58, 43, 36, 0.883) solid 2px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

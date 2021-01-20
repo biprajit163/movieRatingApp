@@ -44,19 +44,27 @@ function CommentHistory() {
             {
                 JSON.parse(localStorage.getItem('loginStatus')) ?
                 <div className="comment-history-container">
-                    <button onClick={() => {
-                        window.location.reload()
-                        localStorage.removeItem('1');
-                        localStorage.removeItem('2');
-                        localStorage.removeItem('3');
-                        localStorage.removeItem('4');
-                        localStorage.removeItem('5');
-                        localStorage.removeItem('6');
-                    }}>Clear Comments</button>
-                    <button onClick={() => {
-                        window.location.reload()
-                        localStorage.setItem('loginStatus', JSON.stringify(initialState.loginStatus));
-                    }}>Logout</button>
+                    <div className="history-btn-container">
+                        <button
+                            className="clear-comments-history" 
+                            onClick={() => {
+                                window.location.reload()
+                                localStorage.removeItem('1');
+                                localStorage.removeItem('2');
+                                localStorage.removeItem('3');
+                                localStorage.removeItem('4');
+                                localStorage.removeItem('5');
+                                localStorage.removeItem('6');
+                            }}
+                        >Clear Comments</button>
+                        <button
+                            className="logout-btn" 
+                            onClick={() => {
+                                window.location.reload()
+                                localStorage.setItem('loginStatus', JSON.stringify(initialState.loginStatus));
+                            }}
+                        >Logout</button>
+                    </div>
                     <Episode1/>
                     <Episode2/>
                     <Episode3/>

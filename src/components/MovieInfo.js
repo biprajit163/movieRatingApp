@@ -72,7 +72,7 @@ function MovieInfo({ match }) {
                         width: '50%',
                         margin: '10px auto'
                     }}
-                >Description: {movie.opening_crawl}</p>
+                >{movie.opening_crawl}</p>
             </div>
 
             <div className="movie-features-container">

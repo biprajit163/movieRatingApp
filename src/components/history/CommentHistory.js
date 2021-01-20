@@ -18,7 +18,7 @@ function CommentHistory() {
     }
 
     const [login, setLogin] = useState(initialState);
-    const [password, setPassword] = useState('checkMyHistory123');
+    const [password, setPassword] = useState('commentHistory123');
 
     function handleSubmit(event) {
         event.preventDefault();

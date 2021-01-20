@@ -9,15 +9,15 @@ function Episode1() {
         let myComments = []
         
         if(localStorage.getItem('1')) {
-            myComments = JSON.parse(localStorage.getItem('1'))
-        }
+            myComments = JSON.parse(localStorage.getItem('1'));
+        } 
 
         setEpisode1Comments(myComments);
     }, []);
 
     return (
         <div className="comment-history">
-            <h4>A New Hope comment history</h4>
+            <h4>The Phantom Menace comment history</h4>
             {
                 episode1Comments.map((comment, index) => {
                     return(

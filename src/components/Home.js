@@ -26,7 +26,6 @@ function Home() {
 
     return (
       <div className="Home">
-          <h1>Something goes here</h1>
         {
             movies.map((movie, i) => {
                 return (

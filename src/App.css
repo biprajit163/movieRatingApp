@@ -91,15 +91,25 @@
   height: 400px;
   overflow: hidden;
 }
+.episode {
+  padding-top: 100%;
+  font-size: 20px;
+  font-family: 'Star Jedi', arial;
+  animation: scroll 10s infinite linear;
+}
 .episode-number {
   font-size: 24px;
 }
-.movie-crawl {
-  display: inline-block;
-  padding-top: 20%;
-  font-size: 20px;
-  font-family: 'Star Jedi', arial;
+@keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -100%);
+  }
 }
+
+
 
 
 

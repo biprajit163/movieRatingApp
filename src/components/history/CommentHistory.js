@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Credentials from './login/Credentials.js';
 
@@ -18,20 +18,18 @@ function CommentHistory() {
     }
 
     const [login, setLogin] = useState(initialState);
-
+    const [password, setPassword] = useState('checkMyHistory123');
 
     function handleSubmit(event) {
         event.preventDefault();
 
-        if(login.password === 'password') {
+        if(login.password === password) {
             setLogin({...login, loginStatus: true});
             localStorage.setItem('loginStatus', 'true');
         } else {
             setLogin(initialState);
             localStorage.setItem('loginStatus', login.loginStatus);
         }
-
-        console.log(login);
     }
 
     function handleChange(event) {
@@ -72,13 +70,11 @@ function CommentHistory() {
                     <Episode5/>
                     <Episode6/>
                 </div> :
-                <div className="login-page">
-                    <Credentials 
-                        handleSubmit={handleSubmit} 
-                        handleChange={handleChange}
-                        login={login}
-                    />
-                </div>
+                <Credentials 
+                    handleSubmit={handleSubmit} 
+                    handleChange={handleChange}
+                    login={login}
+                />
             }
         </div>
     );

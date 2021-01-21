@@ -17,7 +17,7 @@ function Episode5() {
 
     return (
         <div className="comment-history">
-            <h4>The Empire Strikes Back comment history</h4>
+            <h4>The Empire Strikes Back</h4>
             {
                 episode5Comments.map((comment, index) => {
                     return(

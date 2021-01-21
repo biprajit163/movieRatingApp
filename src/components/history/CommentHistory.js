@@ -20,6 +20,7 @@ function CommentHistory() {
     const [login, setLogin] = useState(initialState);
     const [password, setPassword] = useState('commentHistory123');
 
+
     function handleSubmit(event) {
         event.preventDefault();
 
@@ -38,7 +39,7 @@ function CommentHistory() {
 
     return (
         <div className="CommentHistory">
-            <h1>My Comments History</h1>
+            <h1>My Comment History</h1>
             {
                 JSON.parse(localStorage.getItem('loginStatus')) ?
                 <div className="comment-history-container">

@@ -1,4 +1,4 @@
-# Starwars Movie Ratings App
+# Star Wars Movie Ratings App
 This is a Movie Rating App that uses the SWAPI (https://swapi.dev/api/) to fetch data about the first six Starwars movies. Here is a deployed version on Heroku (https://bips-starwars1.herokuapp.com/)   
 
 
